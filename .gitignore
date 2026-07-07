@@ -57,3 +57,6 @@ rsconnect/
 /.quarto/
 **/*.quarto_ipynb
 >>>>>>> d500b26 (Keep local gitignore)
+
+# Ignore rendering folders
+README_files
