@@ -1,0 +1,1 @@
+This text file serves as a progress log, tracking my solutions to coding exercises.
