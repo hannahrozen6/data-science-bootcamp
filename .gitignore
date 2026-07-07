@@ -61,3 +61,6 @@ rsconnect/
 # Ignore rendering folders
 README_files
 README.html
+
+# Ignore Desktop Service Store
+.DS_Store
