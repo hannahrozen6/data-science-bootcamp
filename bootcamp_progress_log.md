@@ -5,6 +5,7 @@
   * Collected and documented resources for R & Data Wrangling, SQL & Database Management, Portfolio & Dashboard Tooling, and Database Catalogs. 
 * Created new files on RStudio for bootcamp progress and coding rules/tips
 * Added initial notes on coding rules and tips
+* Resume editing
 
 7/6/2026
 * Revised and added coding rules and tips 
