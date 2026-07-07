@@ -90,11 +90,11 @@ Git is your ultimate safety net: it tracks changes so you can experiment with co
   Go to the **Git Tab** located in the Environment/History pane:
 
   1.  **Stage:** Check the box next to the files you modified. This tells Git, *"I want to save the changes in these specific files."*
-  2.  **Commit:** Take a snapshot of your staged files and write a short, descriptive message (e.g., `added data cleaning script`).
+  2.  **Commit (Checkbox icon):** Take a snapshot of your staged files and write a short, descriptive message (e.g., `added data cleaning script`).
 
   - *Tip:* Make commits small and frequent. It's much easier to undo a tiny mistake than a massive one.
 
-  3.  **Push:** Send your local commits up to GitHub to back up your work in the cloud.
+  3.  **Push (Upward arrow icon):** Send your local commits up to GitHub to back up your work in the cloud.
 
 - The Life-Saving Rescue Commands
 
