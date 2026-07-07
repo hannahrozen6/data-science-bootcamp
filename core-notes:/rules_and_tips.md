@@ -90,6 +90,14 @@ Git is your ultimate safety net: it tracks changes so you can experiment with co
   - **RStudio Activation:** Ensure the Git tab is explicity enabled. Go to Tools -\> Project Options -\> Git/SVN and set the Version Control System to Git.
   - **Linking to GitHub (Fixes a nonfunctional Push Button):** Create GitHub repository, copy the HTTPS URL, and run `git remote add origin URL` in the Terminal. If it asks for a username and password, use your GitHub username and Personal Access Token (PAT) instead of your password.
 
+- Creating a Repository
+  - Add name relevant to your project
+  - Add short description
+  - Choose Public or Private
+  - Toggle README to on to add README file
+  - Add .gitignore to ignore files like .RData, .csv, and .xlsx
+  - Add license if desired: Allows others to use your code legally. If you don't add a license, your code is automatically copyrighted and cannot be used by others.
+  
 - Repository Organization Strategy
 
   - One project = one GitHub repository.
