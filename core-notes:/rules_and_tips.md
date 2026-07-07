@@ -85,11 +85,16 @@ Markdown syntax applies universally across .md, .Rmd, .qmd, and .Rnw files.
 
 Git is your ultimate safety net: it tracks changes so you can experiment with code without worrying about permanently breaking a working file.
 
-- First-Time Project Activation & GitHub Linking
-  - RStudio Activation: When you create a new RStudio Project, it automatically initializes Git for you. You can confirm this by checking the Git tab in the Environment/History pane.
-  - **The "First Connection" Setup:** You had to link the remote URL and deal with security tokens (PAT), which you only have to do once per project.
-  - **The Folder Mix-up:** The file started out outside the project folder, which paused Git from tracking it.
-  - **The GitHub Collision:** GitHub created a file online while you had one locally, causing a "merge conflict." Git was just trying to protect your work by asking you which one to keep before overwriting anything.
+- First-Time Project Activation & GitHub Linking (only necessary once per project!)
+
+  - **RStudio Activation:** Ensure the Git tab is explicity enabled. Go to Tools -\> Project Options -\> Git/SVN and set the Version Control System to Git.
+  - **Linking to GitHub (Fixes a nonfunctional Push Button):** Create GitHub repository, copy the HTTPS URL, and run `git remote add origin URL` in the Terminal. If it asks for a username and password, use your GitHub username and Personal Access Token (PAT) instead of your password.
+
+- Repository Organization Strategy
+
+  - One project = one GitHub repository.
+  - Do not create a repo for every individual code file or a repo for multiple unrelated projects.
+  - Keep the .RProj file, the \_quarto.yml, all scripts, and the README file in the repository.
 
 - The Daily Workflow: Saving Work to Git
 
@@ -117,48 +122,43 @@ Git is your ultimate safety net: it tracks changes so you can experiment with co
 
   - **The `.gitignore` File:** Every RStudio Project has a hidden file called `.gitignore`. Always add massive datasets (like `.csv` or `.xlsx` files over 100MB) or private API keys to this file. GitHub will block your pushes if your files are too large, and you never want to accidentally leak sensitive data online.
 
-- README file
-Here is the standard anatomy of a great project README:
+- README file Pro Tips
 
-Markdown \# Data Science Bootcamp
+  - Use headers: Use \## for main sections and \### for subsections to keep it organized.
+  - Use Lists: Use bullet points for things like file structures or tool lists. It makes it much easier to read than a giant wall of text.
+  - Keep it Living: A README is a "living document"—as you add new projects or folders, open it and update it.
+  - Once you finish editing your README, save it, and it will appear in the Git tab. Commit and push.
 
-A short, one-sentence description of what this repository is for (e.g., "My central repository for tracking progress, notes, and projects during the 2026 Summer Data Science Bootcamp.")
+- Standard Anatomy of a Great Project README:
 
-## 📌 Project Overview
+  **repository-name**
 
-A longer description where you explain what you are learning, the goals of the bootcamp, or the specific topics you are diving into (R, Python, Data Visualization, etc.).
+  A short, one-sentence description of what this repository is for.
 
-## 📁 Repository Structure
+  **Project Overview**
 
-A quick breakdown of what your files are so people can navigate your repository: \* `bootcamp_progress_log.txt`: My daily tracker of hours and topics covered. \* `rules_and_tips.md`: A guide to RStudio workflows and best practices.
+  A longer description.
 
-## 🛠️ Tools & Technologies
+  **Repository Structure**
 
-- **Language:** R (v4.4+)
-- **IDE:** RStudio / Quarto
-- **Version Control:** Git & GitHub
+  A quick breakdown of what your files are so people can navigate your repository:
 
-## 🚀 How to Use This Repo
+  **Tools & Technologies**
 
-Brief instructions if someone wants to clone your code or look at your work. Pro-Tips for a Great README: Use Headers: Use \## for main sections and \### for subsections to keep it organized.
+  - Languages
+  - Environments & Tools
 
-Use Lists: Use bullet points (\* or -) for things like file structures or tool lists. It makes it much easier to read than a giant wall of text.
+  **How to Use This Repo**
 
-Keep it Living: Don't feel like it has to be perfect right now. A README is a "living document"—as you add new projects or folders over the summer, just open it up and update it.
+  Brief instructions if someone wants to clone your code or look at your work.
 
-Once you finish editing your README, save it, and it will pop right up into your Git tab just like your other file did.
+- Creating Repository Subdirectories: The RStudio Method
 
-
-
-
-- Creating Repository Subdirectories 
-  The RStudio Method
-  - Open the project folder on Finder. 
+  - Open the project folder on Finder.
   - Create your new physical folders right there for the subdirectories.
   - Drag and drop files into those new folders.
   - Open RStudio, go to the Git tab. You will see your files pop up with little yellow ? or blue M icons showing they have moved.
   - Check the boxes to stage them, type a commit message like "reorganized repo into clean subdirectories", and hit Push!
   - Your main branch will instantly update, and anyone visiting your profile will see a structured, professional directory.
 
-- Clean Git Tab Rule:
-Having a clean, completely empty Git tab at the end of every work session is the gold standard of professional engineering practice. When your Git tab is empty, it means your local environment on your computer is in sync with your remote backup on GitHub.
+- Clean Git Tab Rule: Having a clean, completely empty Git tab at the end of every work session is the gold standard of professional engineering practice. When your Git tab is empty, it means your local environment on your computer is in sync with your remote backup on GitHub.
