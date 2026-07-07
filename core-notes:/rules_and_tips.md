@@ -28,7 +28,7 @@ editor: visual
       - Use the Files pane in bottom right, and click the checkboxes of files you want to open. Click the blue gear icon and select "Open Selected Files".
       - To open all files within the project folder, check the first file, then hold down Shift and check the last file. Click the blue gear icon and select "Open Selected Files".
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 ## 2. RSTUDIO FILE TECHNICAL SETUP
 
@@ -40,7 +40,7 @@ editor: visual
   - If theme compilation fails mysteriously, try disabling the Sass cache by running 'export QUARTO_SASS_CACHE=FALSE' in your terminal.
   - If the file fails to render, type 'quarto check' in the terminal to do a system health check.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 ## 3. ENVIRONMENT SETUP
 
@@ -57,7 +57,7 @@ editor: visual
   - Be aware that some libraries share function names. Use the syntax **package:: function** to specify which package you want to use when there is a conflict.
     - For example, filter() is in dplyr and stats. Use the syntax **dplyr::filter()**.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 ## 4. MARKDOWN SYNTAX
 
@@ -79,11 +79,17 @@ Markdown syntax applies universally across .md, .Rmd, .qmd, and .Rnw files.
   - Hyperlinks: Use square brackets for the display text, followed by parentheses for the URL.
     - example: \[Google\](https://www.google.com)
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 ## 5. GIT & VERSION CONTROL
 
 Git is your ultimate safety net: it tracks changes so you can experiment with code without worrying about permanently breaking a working file.
+
+- First-Time Project Activation & GitHub Linking
+  - RStudio Activation: When you create a new RStudio Project, it automatically initializes Git for you. You can confirm this by checking the Git tab in the Environment/History pane.
+  - **The "First Connection" Setup:** You had to link the remote URL and deal with security tokens (PAT), which you only have to do once per project.
+  - **The Folder Mix-up:** The file started out outside the project folder, which paused Git from tracking it.
+  - **The GitHub Collision:** GitHub created a file online while you had one locally, causing a "merge conflict." Git was just trying to protect your work by asking you which one to keep before overwriting anything.
 
 - The Daily Workflow: Saving Work to Git
 
@@ -110,5 +116,49 @@ Git is your ultimate safety net: it tracks changes so you can experiment with co
 - Critical Best Practice
 
   - **The `.gitignore` File:** Every RStudio Project has a hidden file called `.gitignore`. Always add massive datasets (like `.csv` or `.xlsx` files over 100MB) or private API keys to this file. GitHub will block your pushes if your files are too large, and you never want to accidentally leak sensitive data online.
-  
-  daf
+
+- README file
+Here is the standard anatomy of a great project README:
+
+Markdown \# Data Science Bootcamp
+
+A short, one-sentence description of what this repository is for (e.g., "My central repository for tracking progress, notes, and projects during the 2026 Summer Data Science Bootcamp.")
+
+## 📌 Project Overview
+
+A longer description where you explain what you are learning, the goals of the bootcamp, or the specific topics you are diving into (R, Python, Data Visualization, etc.).
+
+## 📁 Repository Structure
+
+A quick breakdown of what your files are so people can navigate your repository: \* `bootcamp_progress_log.txt`: My daily tracker of hours and topics covered. \* `rules_and_tips.md`: A guide to RStudio workflows and best practices.
+
+## 🛠️ Tools & Technologies
+
+- **Language:** R (v4.4+)
+- **IDE:** RStudio / Quarto
+- **Version Control:** Git & GitHub
+
+## 🚀 How to Use This Repo
+
+Brief instructions if someone wants to clone your code or look at your work. Pro-Tips for a Great README: Use Headers: Use \## for main sections and \### for subsections to keep it organized.
+
+Use Lists: Use bullet points (\* or -) for things like file structures or tool lists. It makes it much easier to read than a giant wall of text.
+
+Keep it Living: Don't feel like it has to be perfect right now. A README is a "living document"—as you add new projects or folders over the summer, just open it up and update it.
+
+Once you finish editing your README, save it, and it will pop right up into your Git tab just like your other file did.
+
+
+
+
+- Creating Repository Subdirectories 
+  The RStudio Method
+  - Open the project folder on Finder. 
+  - Create your new physical folders right there for the subdirectories.
+  - Drag and drop files into those new folders.
+  - Open RStudio, go to the Git tab. You will see your files pop up with little yellow ? or blue M icons showing they have moved.
+  - Check the boxes to stage them, type a commit message like "reorganized repo into clean subdirectories", and hit Push!
+  - Your main branch will instantly update, and anyone visiting your profile will see a structured, professional directory.
+
+- Clean Git Tab Rule:
+Having a clean, completely empty Git tab at the end of every work session is the gold standard of professional engineering practice. When your Git tab is empty, it means your local environment on your computer is in sync with your remote backup on GitHub.
