@@ -19,4 +19,8 @@
 * Linked my website to its own GitHub repository and added a README file, allowing for continuous deployment on Netlify
 
 7/8/2026
-* Worked on enhancing my personal website - styling changes, replacing files and revising descriptions, and adding new content
+* Worked on enhancing my personal website
+  * Theme and style changes
+  * Revised descriptions 
+  * Adding new content - expanded Contact page, added projects to Portfolio
+  
