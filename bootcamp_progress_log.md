@@ -16,4 +16,5 @@
 * Set up GitHub account and created a repository for the bootcamp
 * Added a detailed README file 
 * Added notes on how to save to Git to rules and tips doc
-* 
+* Linked my website to its own GitHub repository and added a README file, allowing for continuous deployment
+* Modified my website 
