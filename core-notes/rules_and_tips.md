@@ -170,4 +170,4 @@ Git is your ultimate safety net: it tracks changes so you can experiment with co
   - Check the boxes to stage them, type a commit message like "reorganized repo into clean subdirectories", and hit Push!
   - Your main branch will instantly update, and anyone visiting your profile will see a structured, professional directory.
 
-- Clean Git Tab Rule: Having a clean, completely empty Git tab at the end of every work session is the gold standard of professional engineering practice. When your Git tab is empty, it means your local environment on your computer is in sync with your remote backup on GitHub.
+- Golden Rule of the Git Tab: Always click the blue **Pull** button first thing when you open your project. At the end of every work session, the gold standard of professional engineering practice to have a clean, completely empty Git tab. When your Git tab is empty, it means your local environment on your computer is in sync with your remote backup on GitHub.
