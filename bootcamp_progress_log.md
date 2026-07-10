@@ -20,10 +20,13 @@
 
 7/8/2026
 * Worked on enhancing my personal website
-  * Theme and style changes
-  * Revised descriptions 
-  * Adding new content - expanded Contact page, added projects to Portfolio
+* Theme and style changes
+* Revised descriptions 
+* Adding new content - expanded Contact page, added projects to Portfolio
   
 7/9/2026
 * Continued to add projects to my portfolio page
-* 
+* Created 2 new pages for my website
+* Other website fixes
+
+7/10/2026
