@@ -30,6 +30,6 @@
 * Other website fixes
 
 7/10/2026
-* Organized projects on my website
-* Added to the new website pages
+* Organized & ordered projects on my website - filtered to the best 4 out of the original 16 projects documented
+* Added to the new website pages 
 * Revised the README file for my website repository
