@@ -30,3 +30,6 @@
 * Other website fixes
 
 7/10/2026
+* Organized projects on my website
+* Added to the new website pages
+* Revised the README file for my website repository
