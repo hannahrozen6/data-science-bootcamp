@@ -16,7 +16,7 @@
 * Set up GitHub account and created a repository for the bootcamp
 * Added a detailed README file 
 * Added notes on how to save to Git to rules and tips doc
-* Linked my website to its own GitHub repository and added a README file, allowing for continuous deployment on Netlify
+* Linked my website to its own GitHub repository, allowing for continuous deployment on Netlify, and wrote a README file
 
 7/8/2026
 * Worked on enhancing my personal website
@@ -33,3 +33,8 @@
 * Organized & ordered projects on my website - filtered to the best 4 out of the original 16 projects documented
 * Added to the new website pages 
 * Revised the README file for my website repository
+
+7/10- 7/13/26
+* Heavily revised college ROI technical project
+* Added college ROI project description to technical portfolio
+* Created a github repository for this project and wrote a README file
