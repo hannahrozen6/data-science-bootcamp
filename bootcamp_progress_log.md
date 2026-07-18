@@ -38,3 +38,7 @@
 * Heavily revised college ROI technical project
 * Added college ROI project description to technical portfolio
 * Created a github repository for this project and wrote a README file
+
+7/14-7/18/26
+* Reworked 4 essays for Socio-Technical Risk Assesments page
+* Note: Worked 35-hour work week, less time for bootcamp
