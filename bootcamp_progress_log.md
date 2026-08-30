@@ -7,9 +7,9 @@
 * Added initial notes on coding rules and tips
 * Resume editing
 
-7/6/2026s
+7/6/2026
 * Revised and added coding rules and tips 
-* Organized files on my Mac
+* Organized files on my Mac - took nearly whole day
 * Worked on my personal website - debugging theme compilation and execution errors
 
 7/7/2026
@@ -40,5 +40,16 @@
 * Created a github repository for this project and wrote a README file
 
 7/14-7/18/26
+* Working 35-hour work weeks, less time for bootcamp
 * Reworked 4 essays for Socio-Technical Risk Assesments page
-* Note: Worked 35-hour work week, less time for bootcamp
+
+7/18-8/18/26
+* Not much time for bootcamp due to work schedule, dedicating about 30 min per day
+* Continued to work on revising essays for Socio-Technical Risk Assessments page
+* Made other changes to website and bootcamp schedule
+* Goal setting and planning
+
+8/19-30/26
+* Completed SQLZoo tutorial - all sections (0-7) and exercises
+
+

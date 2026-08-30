@@ -20,5 +20,5 @@ A dedicated repository documenting my independent technical skills development. 
 
 ## Tools & Technologies
 
-- **Language:** SQL, R
+- **Languages:** SQL, R
 - **Environments & Tools:** RStudio, Quarto, Git, GitHub

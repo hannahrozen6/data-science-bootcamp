@@ -1,0 +1,9 @@
+TO DO
+
+For website:
+* Add files to ignore and clean up repo
+* Finish revising essays
+* Add essay descriptions
+* Finish visualizations and creative work
+* Add vis descriptions
+* Finish technical projects descriptions

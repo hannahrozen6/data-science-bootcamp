@@ -1,0 +1,45 @@
+---
+title: "SQL-rules"
+output: pdf_document
+date: "2026-08-19"
+---
+
+## Select Basics
+
+- **SELECT** -\> **FROM** -\> **WHERE**
+- **SELECT** attribute-list: choose desired columns/attributes 
+  - in comma separated list format
+  - to select all use *
+  - can use expressions
+  - can use **DISTINCT** to keep only unique values
+- **FROM** table-name: specify the table/database where the data is being extracted from
+- **WHERE** condition: filters records
+  - boolean expression which each row must satisfy
+  - can use = to get exact match
+  - can use <> not equals operator
+  - can use mathematical and string expressions (\>, \<, etc)
+  - can use **AND** for several conditions
+  - can use **OR** for either or both (inclusive)
+  - can use **XOR** for only either not both (exclusive)
+  - can use **NOT** for opposite condition
+  - can use **IN** to check if an item is in a list (ie **WHERE** name **IN** (...))
+  - can use **LIKE** for pattern matching with **%** as the wild card (ie **WHERE** name **LIKE** 'D%')
+  - can use **BETWEEN** for range checking (ie **WHERE** area **BETWEEN** 200 **AND** 250)
+  
+## Functions
+- **ROUND()** 
+    - specify value to be rounded, # of decimal places to round to
+- **LENGTH()** 
+  - returns the number of characters in a string
+- **LEFT()**
+  - isolates the first character
+  
+## Ordering
+- By default, SQL sorts data in ascending order.
+- **ORDER BY**
+  - For descending order: Add **DESC** immediately after the column name (ie ORDER BY column_name DESC)
+  - **GROUP BY**
+
+
+
+  
