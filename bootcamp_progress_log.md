@@ -51,5 +51,14 @@
 
 8/19-30/26
 * Completed SQLZoo tutorial - all sections (0-7) and exercises
+* Added coding rules and tips for SQL - new bootcamp doc
+
+8/31- 9/5/26
+* Updated homepage for website - detailed and more focused
+* Capstone Project
+  * Brainstormed and decided on oral history project
+  * Created a guided plan for the project
+  * Set up repo
+* Updated GitHub section of coding tips for efficiency of project activation
 
 
