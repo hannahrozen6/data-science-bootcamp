@@ -86,9 +86,20 @@ Markdown syntax applies universally across .md, .Rmd, .qmd, and .Rnw files.
 Git is your ultimate safety net: it tracks changes so you can experiment with code without worrying about permanently breaking a working file.
 
 - First-Time Project Activation & GitHub Linking (only necessary once per project!)
+  1. **Create the Repo:** 
+    * Create repo on GitHub.com. 
+    * Copy the SSH URL (e.g., `git@github.com:hannahrozen6/your-new-repo.git`).
+  2. **Clone & Create Project in RStudio:** 
+    * Open RStudio and go to **File** $\rightarrow$ **New Project...**. 
+    * Select **Version Control**, and choose **Git**. 
+    * Paste the SSH URL into the **Repository URL** field. 
+    * Choose where to store the project folder on your Mac under **Create project as subdirectory of**. 
+    * Click **Create Project**.
+  3. **Verify Git Integration:** 
+    * Check the top-right pane in RStudio. You should see a **Git** tab ready to track your changes.
+  4. **Add Your Files & Code:** 
+    * Start adding your scripts, data, and subfolders inside the new project directory.
 
-  - **RStudio Activation:** Ensure the Git tab is explicity enabled. Go to Tools -\> Project Options -\> Git/SVN and set the Version Control System to Git.
-  - **Linking to GitHub (Fixes a nonfunctional Push Button):** Create GitHub repository, copy the HTTPS URL, and run `git remote add origin URL` in the Terminal. If it asks for a username and password, use your GitHub username and Personal Access Token (PAT) instead of your password.
 
 - Creating a Repository
 
