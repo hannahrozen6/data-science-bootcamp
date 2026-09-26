@@ -85,3 +85,6 @@ NLP techniques, and other useful info on data pipelines
  * Documented all schema fields (aka metadata analysis)
  * Preprocessing on prototype files - cleaning and tokenizing
 * Revised data science rules and tips
+
+9/13-25/26
+* Moving into apartment and starting school
