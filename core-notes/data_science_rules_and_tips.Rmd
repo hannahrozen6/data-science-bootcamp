@@ -1,0 +1,132 @@
+---
+title: "A Guide to Data Science and Machine Learning"
+author: "Hannah Rozenbaum"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+install.packages(tidytext)
+library(knitr)
+opts_chunk_set(echo = TRUE, warning = FALSE, message = FALSE)
+library(tidyverse)
+library(DBI)
+library(RSQLite)
+library(tidytext)
+```
+
+# 1. Sampling Strategies & Corpus Formation
+
+## Core Rules
+
+- **Avoid Convenience Sampling:** Never default to the first files listed. Intentionally sample across key metadata fields (regions, demographics, date, etc) for representation .
+- **Start with MVP Sizing:** Build pipelines on a small corpus (5–10 files) to run working code efficiently before scaling to a massive corpus.
+- **Document Sampling Criteria:** State explicitly in documentation how files were chosen to ensure reproducibility and acknowledge selection limitations.
+
+## **Strategy**
+
+**Stratified Random Sampling / Balanced Representative Sampling**
+
+1.  **Identify Key Metadata Dimensions:** Examine the collection's metadata tags, such as Date or Location. You may need to extract them manually if there is no convenient tagging system.
+
+2.  **Sample Across Stratas:** If the archive spans 1950–2010 across 10 states, intentionally pick 1–2 transcripts from each decade or region rather than clustering in one area.
+
+3.  **Document Your Sampling Rules:** In the README explicitly state your criteria: "To minimize selection bias, 10 transcripts were selected via stratified sampling across three distinct geographic regions (South, Midwest, Urban Northeast) and across two time periods (1950–1970 vs. post-1970)."
+
+## Reference Code: Stratified Sample Verification
+
+```{r sampling-check, eval=FALSE}
+# Example verification check on raw metadata prior to processing
+metadata_sample <- tibble(
+  interview_id = 1:10,
+  decade = c("1960s", "1960s", "1970s", "1970s", "1980s", "1980s", "1990s", "1990s", "2000s", "2000s"),
+  region = rep(c("South", "Northeast", "Midwest", "West", "South"), 2)
+)
+
+# Confirm sample balance across dimensions
+metadata_sample %>% 
+  count(decade, region)
+
+```
+
+------------------------------------------------------------------------
+
+# 2. Ingestion & Storage Standards
+
+## Core Rules
+
+- **Keep `data/raw/` Immutable:** Raw files should never be directly edited. Treat them as read-only.
+- **Relational Storage First:** Ingest data into a structured database (e.g., SQLite).
+- **Enforce Consistent Keying:** Assign unique ID(s) across all tables for clean join operations.
+
+## Reference Code: SQLite Database Ingestion
+
+```{r sqlite-ingestion, eval=FALSE}
+# 1. Connect to local SQLite database
+con <- dbConnect(RSQLite::SQLite(), "data/processed/testimonies.db")
+
+# 2. Define schema and create table
+dbExecute(con, "
+  CREATE TABLE IF NOT EXISTS raw_transcripts (
+    interview_id TEXT PRIMARY KEY,
+    speaker TEXT,
+    year INTEGER,
+    region TEXT,
+    transcript_text TEXT
+  )
+")
+
+# 3. Disconnect when finished
+dbDisconnect(con)
+
+```
+
+------------------------------------------------------------------------
+
+# 3. Text Preprocessing & Cleaning Rules
+
+## Core Rules
+
+- **Regex Line Cleaning:** Strip out structural artifact patterns like page headers, page numbers, timestamp markers, etc.
+- **Tokenize before Filtering:** Convert text to lower-case unigrams/bigrams prior to joining with stop-word lexicons.
+- **Domain-Specific Stop Words:** Stopwords differ based on the type of documents you are analyzing (news article, spoken interview, movie script, etc). Build a custom exclusion list.
+
+## Reference Code: Tidytext Cleaning Pipeline
+
+```{r text-cleaning, eval=FALSE}
+# Custom domain stop-words
+custom_stops <- tibble(word = c("interviewer", "speaker", "transcript", "yeah", "um", "uh"))
+
+# Standard cleaning pipeline
+clean_tokens <- raw_data %>%
+  # Remove timestamps and bracketed notes
+  mutate(clean_text = str_remove_all(transcript_text, "\\[.*?\\]|\\(.*?\\)|\\d+:\\d+:\\d+")) %>%
+  # Tokenize
+  unnest_tokens(word, clean_text) %>%
+  # Remove standard and custom stop-words
+  anti_join(stop_words, by = "word") %>%
+  anti_join(custom_stops, by = "word") %>%
+  # Strip numbers and punctuation leftovers
+  filter(!str_detect(word, "^[0-9]+$"))
+
+```
+
+------------------------------------------------------------------------
+
+# 4. NLP Modeling & Evaluation Techniques
+
+## Core Rules
+
+- **TF-IDF for Term Importance:** Use Term Frequency-Inverse Document Frequency (TF-IDF) to highlight domain-distinctive words rather than high-frequency generic terms.
+- **Topic Modeling (LDA):** Use Latent Dirichlet Allocation to discover latent themes across document groupings.
+- **Track Sentiment Trajectories:** Evaluate narrative arcs across document progression (e.g., dividing long transcripts into 10% index chunks rather than taking a single average score).
+
+## Reference Code: TF-IDF Calculation
+
+```{r tf-idf, eval=FALSE}
+# Compute distinctive terms per interview
+interview_tfidf <- clean_tokens %>%
+  count(interview_id, word, sort = TRUE) %>%
+  bind_tf_idf(word, interview_id, n) %>%
+  arrange(desc(tf_idf))
+
+```

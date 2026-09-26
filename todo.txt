@@ -1,5 +1,13 @@
 TO DO
 
+SEE BOOTCAMP TIMELINE FOR MORE, these are just small fixes I remember to make
+
+For oral history proj:
+* Go through comments on code files and rewrite 
+* Edit parser to also handle (Interviewers: and then update testimonies_interim.db construction doc to note that i did this)
+* Double check "About this collection" to ensure you included all beneficial metadata
+* ! When an interview features multiple speakers (e.g., "Interviewees: Dr. John Sam Smith and Gerard M. Lee, Jr."), storing them as a single string in SQLite ("Dr. John Sam Smith and Gerard M. Lee, Jr.") is completely fine for basic querying. However, if you want to perform analysis by individual speaker later, use delimited string.Normalize the names with semicolons during parsing: "Dr. John Sam Smith; Gerard M. Lee, Jr.". This keeps your database schema as a single flat table while making it easy to run separate_rows() in R during analysis.
+
 For website:
 * Add files to ignore and clean up repo
 * Finish revising essays
@@ -7,3 +15,38 @@ For website:
 * Finish visualizations and creative work
 * Add vis descriptions
 * Finish technical projects descriptions
+* Change netlify to personal email to avoid losing access
+* make sure data storytelling section on homepage aligns with actual project and what you end up doing
+* put whole website in for review to gemini
+* eliminate wordiness, read over whole thing, check for accuracy
+* Ask AI if page is consistent and clean throughout, any other necessary changes
+* Tech portfolio
+  * Anti fluff pass on all the tools and methodologies (to get rid of generic, overly simple or redundant) 
+    * go to each portfolio edit page and paste the following: Which of these tools and methodologies are actually useful to include? Let's do an "anti-fluff" pass to ensure that we're not including any generic, overly simple/basic, or redundant ones: [insert tools and methodology sections]
+    * Done for ROI Proj, finish for comms hws merged, datafest, youtube proj
+  * Check links are all working and updated
+* Add to data vis - data portrait
+* Add to essays - comm 188c hw4, the select cluster essays
+* Fix graph analysis for ROI proj?
+
+For README:
+* Add python to list of languages used if you end up using it
+* Update the Repo Structure!!! Created new files since
+* Check whole README to make sure it's accurate
+
+Coding Practice:
+* SQL Practice (leetcode) and add to SQL subfolder 
+* SQL zoo to do (saved in bookmark)
+
+Progress log:
+* Ensure it's up to date
+
+GitHub
+* Add old java projects, datafest, comms hws, stats 20 projects
+
+Other:
+* Create a stats/math concepts rules and tips?
+  * Types of sampling
+* Add some functions/coding lessons to rstudio rules and tips (prob after reading the guidebook to coding in r)
+* Edit ds rules and tips 
+

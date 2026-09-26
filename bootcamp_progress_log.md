@@ -56,9 +56,32 @@
 8/31- 9/5/26
 * Updated homepage for website - detailed and more focused
 * Capstone Project
-  * Brainstormed and decided on oral history project
+  * Brainstormed and decided on oral history project - analyzing oral history transcripts from the Library of Congress Civil Rights History Project using NLP techniques
   * Created a guided plan for the project
+  * Took notes on data source 
   * Set up repo
 * Updated GitHub section of coding tips for efficiency of project activation
+* Created Data Science rules and tips doc - for best, representative corpus practices, 
+NLP techniques, and other useful info on data pipelines
 
+9/6/26
+* Capstone Project NLP
+  * Selected 5 random files for prototype phase
+  * Converted files to text 
+  * Cleaned up proj architecture  
+* Other
+  * Added some functions to RStudio Guide
+  
+9/7 - 8/26
+* Capstone Project NLP
+  * Set up SQLite database for raw txt files
+  * Extracted table schema from transcripts
+  
+9/8 - 11/26 
+* Busy preparing to leave for UCLA
 
+9/12/26
+* Capstone Project NLP
+ * Documented all schema fields (aka metadata analysis)
+ * Preprocessing on prototype files - cleaning and tokenizing
+* Revised data science rules and tips

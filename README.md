@@ -18,6 +18,9 @@ A dedicated repository documenting my independent technical skills development. 
 
 - `sql-practice/`: Production-level database queries
 
+## Capstone Project 
+-  **[Oral History NLP Project](https://github.com/hannahrozen6/oral-history-nlp)**: Data science project analyzing oral history transcripts using natural language processing.
+
 ## Tools & Technologies
 
 - **Languages:** SQL, R

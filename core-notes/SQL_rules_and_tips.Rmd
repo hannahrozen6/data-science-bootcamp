@@ -1,5 +1,6 @@
 ---
 title: "SQL-rules"
+author: "Hannah Rozenbaum"
 output: pdf_document
 date: "2026-08-19"
 ---
