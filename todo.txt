@@ -9,6 +9,9 @@ For oral history proj:
 * ! When an interview features multiple speakers (e.g., "Interviewees: Dr. John Sam Smith and Gerard M. Lee, Jr."), storing them as a single string in SQLite ("Dr. John Sam Smith and Gerard M. Lee, Jr.") is completely fine for basic querying. However, if you want to perform analysis by individual speaker later, use delimited string.Normalize the names with semicolons during parsing: "Dr. John Sam Smith; Gerard M. Lee, Jr.". This keeps your database schema as a single flat table while making it easy to run separate_rows() in R during analysis.
 
 For website:
+* Add resume back!
+* Add merged comms hw
+* add oral history proj and dghum proj when finished
 * Add files to ignore and clean up repo
 * Finish revising essays
 * Add essay descriptions
@@ -24,10 +27,13 @@ For website:
   * Anti fluff pass on all the tools and methodologies (to get rid of generic, overly simple or redundant) 
     * go to each portfolio edit page and paste the following: Which of these tools and methodologies are actually useful to include? Let's do an "anti-fluff" pass to ensure that we're not including any generic, overly simple/basic, or redundant ones: [insert tools and methodology sections]
     * Done for ROI Proj, finish for comms hws merged, datafest, youtube proj
+    * edit doc: read over and remove weird gap and group # for youttube project
   * Check links are all working and updated
 * Add to data vis - data portrait
 * Add to essays - comm 188c hw4, the select cluster essays
 * Fix graph analysis for ROI proj?
+* yotube report has many grammar fixes to be made
+
 
 For README:
 * Add python to list of languages used if you end up using it
