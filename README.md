@@ -16,11 +16,7 @@ A dedicated repository documenting my independent technical skills development. 
   - `data_science_rules_and_tips.md`: A guide to best practices in data science, including corpus selection, NLP techniques, and data pipeline management.
   - `SQL_rules_and_tips.md`: A guide to SQL coding rules, best practices, and tips for efficient database querying.
 
-- `r-statistical-computing/`: Scripts, exercises, and projects related to statistical computing in R, including Tidyverse pipelines and data visualization.
-
-- `sql-practice/`: Production-level database queries
-
-## Capstone Project 
+## Capstone Project (in-progress)
 -  **[Oral History NLP Project](https://github.com/hannahrozen6/oral-history-nlp)**: Data science project analyzing oral history transcripts using natural language processing.
 
 ## Tools & Technologies
